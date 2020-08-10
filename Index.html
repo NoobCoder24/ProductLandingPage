@@ -9,28 +9,29 @@
 <body> 
         <header id="header">
             <div class="logo-img">
-                <img id="header-img" class="logo"src="images/pin.png" alt="NoobCoderPPE_24/7.in">
+              <a href="#Subscribe-Section" ><img id="header-img" class="logo"src="images/pin.png" alt="NoobCoderPPE_24/7.in"></a>
                 <span class="logo__text">Home of the CoronaPPE</span>
             </div>
             <nav id="nav-bar">
-                <ul class="nav-link">
-                    <li><a href="#Products">Products</a></li>
-                    <li><a href="#services-container">Services</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                <ul class="nav-link-bar">
+                    <li><a class="nav-link" href="#Products">Products</a></li>
+                    <li><a class="nav-link" href="#Services">Services</a></li>
+                    <li><a class="nav-link" href="#Contact">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
         <section id="Subscribe-Section">
-         <form id="form">
+         <form id="form" action="https://www.freecodecamp.com/email-submit">
             <h2>Subscribe for daily feeds regarding Covid-19 alerts and PPE kits.</h2>
             <div class="form-section">
-                <input type="email" id="email" placeholder="Enter your email address" 
-                pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required ><br>
-                <button type="submit" id="submit">Subscribe</button>
+                <input name="email" type="email" id="email" placeholder="Enter your email address" required ><br>
+                <input type="submit" id="submit" class="btn" value="Subscribe"></input>
+
+                <!-- <button type="submit" id="submit" class="btn">Subscribe</button> -->
             </div>
             <div class="video-section">
-                <iframe width="720" height="315"
-                src="https://www.youtube.com//embed/tgbNymZ7vqY?autoplay=1">
+                <iframe id="video" width="720" height="315"
+                src="https://www.youtube.com//embed/tgbNymZ7vqY?autoplay=1" frameborder="0" allowfullscreen>
             </iframe>
             </div>
         </form>      
@@ -39,45 +40,97 @@
             <h1 class="h-primary center">Products</h1>
             <div class="product-container">
                 <div class="box">
-                <img src="" alt="">
+                <img src="https://cdn.pixabay.com/photo/2020/04/29/15/41/respiratory-mask-5109356_960_720.png" alt="Face Mask">
                 <h2 class="h-secondary center">Face Mask</h2>
 
                 </div>
                 <div class="box">
-                    <img src="" alt="">
+                    <img src="https://images.homedepot-static.com/productImages/f665086b-77bd-4d77-b6b9-4a4c4a8e9412/svn/hdx-disposable-gloves-hdx00290-10-64_1000.jpg" alt="Gloves">
                     <h2 class="h-secondary center">Hand Gloves</h2>
                 </div>
                 <div class="box">
-                    <img src="" alt="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTXWutCqbvH-diM6PZuRMwcuwOkZgX0cVTObA&usqp=CAU" alt="Face Sheilds ">
                     <h2 class="h-secondary center">Face Sheilds</h2>
                 </div>
                 <div class="box">
-                    <img src="" alt="">
+                    <img src="https://d3i71xaburhd42.cloudfront.net/f578ba7450cd5904ce90fef85354f2447ac4f69c/1-Figure1-1.png" alt="Coverall Suit">
                     <h2 class="h-secondary center">Coverall Suit</h2>
                 </div>
                 <div class="box">
-                    <img src="" alt="">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Non-woven_Fabric_Shoe_Covers_-_Taj_Mahal_-_Agra_2014-05-14_3916.JPG/800px-Non-woven_Fabric_Shoe_Covers_-_Taj_Mahal_-_Agra_2014-05-14_3916.JPG" alt="Shoe Cover">
                     <h2 class="h-secondary center">Shoe Cover</h2>
                 </div>
                 <div class="box">
-                    <img src="" alt="">
+                    <img src="https://images.pexels.com/photos/4066426/pexels-photo-4066426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Hood Cover">
                     <h2 class="h-secondary center">Hood Cover</h2>
                 </div>
                 <div class="box">
-                    <img src="" alt="">
+                    <img src="https://images.pexels.com/photos/4066498/pexels-photo-4066498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Goggles">
                     <h2 class="h-secondary center">Goggles</h2>
                 </div>
                 <div class="box">
-                    <img src="" alt="">
+                    <img src="https://images.pexels.com/photos/3746335/pexels-photo-3746335.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Waste Disposal Bag">
                     <h2 class="h-secondary center">Waste Disposable Bag</h2>
                 </div>
-
             </div>
-        </section>  
-        
-
-
-    
-
+        </section> 
+        <section id="Services">
+            <h1 class="h-primary center">Services</h1>
+            <div class="service-container">
+                <div class="row">
+                    <div class="tooltip">
+                        <img class="responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Light_Bulb_or_Idea_Flat_Icon_Vector.svg/473px-Light_Bulb_or_Idea_Flat_Icon_Vector.svg.png" alt="Supplies">
+                        <span class="tooltiptext">I need Supplies</span>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="tooltip">
+                        <img class="responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/First_aid_kit_%2870543%29_-_The_Noun_Project.svg/1200px-First_aid_kit_%2870543%29_-_The_Noun_Project.svg.png" alt="Supply">
+                        <span class="tooltiptext">I can Supply</span></div>
+                   
+                </div>
+                <div class="row">
+                    <div class="tooltip">
+                        <img class="responsive" src="https://storage.needpix.com/rsynced_images/material-icon-2155446_1280.png" alt="Manufacture">
+                    <span class="tooltiptext">I can Manufacture</span></div>
+                    
+                </div>
+            </div>
+        </section> 
+        <section id="Contact">
+            <div class="container">
+                <div style="text-align:center">
+                  <h2>Contact Us</h2>
+                  <p>Swing by for a cup of coffee, or leave us a message:</p>
+                </div>
+                <div class="row-contact">
+                  <div class="column">
+                    <img src="/w3images/map.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <form action="/action_page.php">
+                      <label for="fname">First Name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                      <label for="lname">Last Name</label>
+                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                      <label for="country">Country</label>
+                      <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                      </select>
+                      <label for="subject">Subject</label>
+                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                      <input class="input-submit" type="submit" value="Submit">
+                    </form>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <footer>
+            <div class="footer">
+           <p> © Copyright 2020, All Rights Reserved | NoobCoder24/7</p>
+        </div>
+        </footer>
 </body>
 </html>

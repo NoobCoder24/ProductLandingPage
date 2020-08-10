@@ -112,19 +112,19 @@ header::before{
 
 
 
-.nav-link{
+.nav-link-bar{
  list-style: none;
 
 }
 
-.nav-link li{
+.nav-link-bar li{
    display: inline-block;
    padding: 0px 20px;
 
 
 }
 
-.nav-link li a{
+.nav-link-bar li a{
     transition: all 0.3s ease 0s;
     text-decoration: none;
     color:  #000;
@@ -132,7 +132,7 @@ header::before{
     padding: 14px 16px;
 }
 
-.nav-link li a:hover{
+.nav-link-bar li a:hover{
     background: white;
     color: black;
     border-radius: 50%;
@@ -198,7 +198,7 @@ input{
 }
 
 
-button{
+.btn{
 border-radius: 10px;
 width: 150px;
 height: 50px;
@@ -209,7 +209,7 @@ display: block;
 transform: translate(2px 2px);
 }
 
-#Subscribe-Section button[type="submit"] {
+#Subscribe-Section .btn[type="submit"] {
     max-width: 150px;
     width: 100%;
     height: 30px;
@@ -217,7 +217,7 @@ transform: translate(2px 2px);
     border: 10px;
   }
 
-button:hover{
+.btn:hover{
     background-color: black;
     color: white;
     box-shadow: 2px 2px 2px red;
@@ -233,14 +233,181 @@ button:hover{
 
 #Products{
  background-color: rgb(210, 219, 235);
-}
-.product-container{
-    margin: 34px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
+padding-top: 40px;
 
 }
+.product-container{
+    margin: 30px 100px 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+     font-size: 12px;
+     padding-bottom: 90px;
+     padding-right: 100px;
+ 
+}
+
+.product-container .box{
+    border: 1px solid brown;
+    padding-top:20px;
+    padding: 0 20px 20px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 30px;
+
+    text-align: center;
+    box-sizing: border-box;
+
+
+    float:left;
+    list-style: none;
+    width:12%;
+    height:215px;
+    margin: 20px 20px 0px 100px ;
+}
+
+.product-container .box:hover{
+    opacity: 0.8;
+    color: red;
+    transition: .9s;
+}
+
+.product-container .box img{
+    height: 70%;
+    margin: auto;
+    display: block;
+    align-items: center;
+    margin-top: 1px;
+    background-color: white;
+    border-radius: 100%;
+    width: 100px;
+
+    
+}
+
+
+@media only screen and (min-width: 400px) {
+    .box{
+    margin: 0;
+    }
+
+    
+  .product-container{
+      padding: 50px;
+      
+}
+  }
+
+
+
+/* -----services-- */
+#Services{
+    height: 640px;
+    width: 100%;
+    align-items: center;
+    
+
+}
+
+.service-container{
+  
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    height: 420px;
+    margin-top: 70px;
+}
+
+
+.service-container .row{
+    list-style: none;
+    width:100%;
+}
+
+
+    
+
+ .service-container .row img{
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    padding-left: 100px;
+  
+    
+} 
+
+
+
+@media only screen and (min-width: 400px) {
+    .row{
+    margin: 0;
+    }
+
+    
+  .service-container{
+      padding: 0;
+      
+}
+  }
+
+
+/* ---tooltip container--- */
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px black; /* If you want dots under the hoverable text */
+  }
+
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+   
+    width: 220px;
+    bottom: 100%;
+     left: 50%;
+    margin-left: -60px; 
+
+    background-color: black;
+    color: rgb(243, 237, 237);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+
+
+  .tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+
+  }
+
+
 
 
 /* ---utility----- */
@@ -252,68 +419,82 @@ button:hover{
     text-align: center;
 }
 
-
-
-
-
-/* ----no use below ccs--- */
-
-/* !--header section----- */
-/* 
-#header{
-    display: flex;
-   position: fixed;
-    top: 0px;
-    justify-items: right;
-    padding: 0px 10%;
-    box-shadow: 2px 2px 12px rgba(0,0,0, 0,2) ;
-} */
-/* 
-#header::before{
-    content: "";
-    background-color: rgb(12, 204, 140);
-   
-    top:0px;
-    left:0px;
-    height: inherit;
-    width:100%;
-    z-index: -1;
-    opacity: 0.3;
-} */
-/* 
-#logo{
-    margin: 10px 34px;
-   
-} */
-
-/* #logo img{
-    height: 50px;
-    margin: 3px 6px;
-    border-radius: 0rem;
-    
-} */
-/* 
-#nav-bar ul{
-    display: flex;
-    font-family: 'Baloo Bhai', cursive;
-    padding-top: 30px;
-} */
-/* 
-#nav-bar ul li{ 
-    list-style: none;
-    font-size: 1.3rem;
-} */
-
-/* #nav-bar ul li a{
-    color: rgb(12, 10, 10);
-    display: block;
-    padding: 3px 22px;
-    border-radius: 20px;
-    text-decoration: none;
-} */
-
-/* #nav-bar ul li a:hover{
-    color: black;
-    background-color: white;
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 1.1rem;
+    padding: 12px;
 }
- */
+
+
+
+/* -----contact Section---- */
+
+
+#Contact{
+    box-sizing: border-box;
+  }
+  
+  /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  .input-submit[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .input-submit[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    padding: 18px;
+  }
+  
+  /* Clear floats after the columns */
+  .row-contact:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  
+  /* --footer-- */
+
+.footer{
+    background-color: rgb(180, 219, 241);
+    position:relative;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+  }
+
