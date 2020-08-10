@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -8,15 +11,31 @@ html{
 }
 
 
-#header{
-    background-color: rgba(167, 202, 218, 0.315);
+
+header{
     display: flex;
-    justify-content:space-between;
-    height: 50%;
-    top: 0rem;
-    padding: 0px 1%;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 1px;
+
+    height: 130px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 2px 1px 15px black;
+    
+}
+
+header::before{
+    content: "";
+    background-color: rgba(146, 200, 224, 0.315);
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 1;
+    overflow: hidden;
 }
 
 @media (max-width: 600px) {
@@ -26,26 +45,22 @@ html{
   }
 
 
-header img{
-    height: 100px;
-    width: auto;
-    border-radius: 50%;
-    
-}
+.logo-img{
+    width: 10vw;
+    margin-right: auto;
+    margin-left: 20px;
+    margin-top: 0px;
+  }
 
-.logo{
-    margin: 5px 4px;
-}
-
-@media (max-width: 650px) {
-    .logo {
+  @media (max-width: 650px) {
+    .logo-img {
       margin-top: 15px;
       width: 100%;
       position: relative;
     }
   }
 
-  .logo > img {
+  .logo-img > img {
     width: 100%;
     height: 100%;
     max-width: 100px;
@@ -57,36 +72,72 @@ header img{
   }
 
   @media (max-width: 650px) {
-    .logo > img {
+    .logo-img > img {
       margin: 0 auto;
     }
   }
   
   
 
-#nav-bar{
-    display: flex;
-    padding: 30px 100px 30px 0;
-    
+.logo{
+    cursor: pointer;
+    height: 100px;
+    border-radius: 50%;
+    width: 100%;
+    transition: transform .5s;
 }
 
-#nav-bar ul {
-    display: flex;
-    
+.logo__text {
+    color: black;
+    font-size: .9em;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: left;
+    text-transform: capitalize;
+    opacity: 0;
+    transition: opacity .5s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  padding-left: 15px;
+  }
+
+  .logo-img:hover .logo {
+    transform: translateY(-10px);
+  }
+
+  .logo-img:hover .logo__text {
+    opacity: 1;
+  }
+
+
+
+.nav-link{
+ list-style: none;
+
 }
 
-/* --for link dot from product,services-- */
-#nav-bar ul li{
-    list-style: none;
-    
+.nav-link li{
+   display: inline-block;
+   padding: 0px 20px;
+
+
 }
 
-/* ---for underline --- */
-#nav-bar ul li a{
-    color: #000;
+.nav-link li a{
+    transition: all 0.3s ease 0s;
     text-decoration: none;
+    color:  #000;
+    text-align: center;
+    padding: 14px 16px;
+}
 
-} 
+.nav-link li a:hover{
+    background: white;
+    color: black;
+    border-radius: 50%;
+}
+
 
 /* <---subscribe Section-----> */
 
@@ -96,13 +147,12 @@ header img{
     align-items: center;
     justify-content: center;
     text-align: center;
-   height: 775px;
-    margin-top: 2px;
+    height: 700px;
+    margin-top:0px;
     width: 100%;    
-    background-image: url('https://c1.wallpaperflare.com/preview/57/824/886/stethoscope-doctor-health-medical-equipment-medicine-medical.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    border: 1px solid ;
+    
     
 
     
@@ -110,7 +160,7 @@ header img{
 
 @media only screen and (min-width: 400px) {
     Subscribe-Section {
-    background-image: url('https://c1.wallpaperflare.com/preview/57/824/886/stethoscope-doctor-health-medical-equipment-medicine-medical.jpg');
+    background-image:none;
     }
   }
 
@@ -123,9 +173,10 @@ h2{
     flex-direction: column;
     position: relative;
     align-items: center;
-    height: 500px;
+    height: 400px;
     align-items: center;
     padding-top: 40px;
+    
 }
 
 .form-section{
@@ -141,7 +192,6 @@ h2{
   }
 
 input{
-
     width: 30%;
     height: 30px;
     border-radius: 10px;
@@ -174,12 +224,39 @@ button:hover{
 }
 
 .video-section{
-    margin-top: 100px;
+    margin-top: 50px;
+
+} 
+
+/* ----Product Section---- */
+
+
+#Products{
+ background-color: rgb(210, 219, 235);
+}
+.product-container{
+    margin: 34px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
 
 }
 
 
+/* ---utility----- */
 
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2rem;
+    padding: 12px;
+    text-align: center;
+}
+
+
+
+
+
+/* ----no use below ccs--- */
 
 /* !--header section----- */
 /* 
